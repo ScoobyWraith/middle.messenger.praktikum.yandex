@@ -1,0 +1,58 @@
+@import '../../../../common-styles/style-vars';
+
+.chat-item {
+    display: flex;
+    height: 67px;
+    border-bottom: 1px solid $common-border-gray-color;
+    padding: 10px;
+    width: 100%;
+    gap: 5px;
+
+    &__avatar {
+        flex: 0 0 50px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        overflow: hidden;
+    }
+
+    &__name {
+        font: $font-title;
+        color: $common-black-color;
+    }
+
+    &__description {
+        color: $common-gray-color;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 50px;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    &__datetime {
+        font: $font-small;
+        color: $common-gray-color;
+    }
+
+    &__unreads {
+        background-color: $common-blue-color;
+        color: $common-white-color;
+    }
+}
+
+.chat-item:hover {
+    background-color: $common-selected-blue;
+    cursor: pointer;
+    padding: 8px;
+}

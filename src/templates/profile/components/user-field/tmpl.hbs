@@ -1,0 +1,12 @@
+<label for="{{ name }}" class="user-field {{#if className}} {{className}}{{/if}}">
+    <span class="user-field__title">{{ title }}</span>
+    <input 
+        dir="rtl"
+        class="user-field__input"
+        name="{{ name }}" 
+        type="{{ type }}" 
+        {{#if placeholder}}placeholder="{{ placeholder }}"{{/if}} 
+        {{#if value}}value="{{ value }}"{{/if}} 
+        {{#if disabled}}disabled{{/if}} 
+    />
+</label>

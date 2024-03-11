@@ -1,0 +1,26 @@
+@import './../../common-styles/style-vars.scss';
+
+.mock-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__code {
+        font: $font-large;
+    }
+
+    &__text {
+        font: $font-big;
+    }
+}

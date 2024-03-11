@@ -1,0 +1,13 @@
+<div class="chat-item {{#if className}} {{className}}{{/if}}">
+    {{>Avatar avatar=avatar className='chat-item__avatar' classNameImg='chat-item__img'}}
+    <div class="chat-item__content">
+        <span class="chat-item__name">{{ name }}</span>
+        <span class="chat-item__description">{{ description }}</span>
+    </div>
+    <div class="chat-item__info">
+        <span class="chat-item__datetime">{{ datetime }}</span>
+        {{#if unreads}}
+        <div class="chat-item__unreads around-block">{{ unreads }}</div>
+        {{/if}}
+    </div>
+</div>

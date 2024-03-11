@@ -1,0 +1,15 @@
+{{#> DialogWindow}}
+<form class="entry-form">
+    <div class="entry-form__header">
+        {{> Title text='Вход' }}
+    </div>
+    <div class="entry-form__body">
+        {{> InputField name='login' type='text' placeholder='Логин' title='Логин' }}
+        {{> InputField name='password' type='password' placeholder='Пароль' title='Пароль' }}
+    </div>
+    <div class="entry-form__footer">
+        {{> Button text='Войти'}}
+        {{> Link text='Нет аккаунта?' href='/registration/'}}
+    </div>
+</form>
+{{/DialogWindow}}

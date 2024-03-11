@@ -1,0 +1,16 @@
+<div class="chats">
+    <div class="side">
+        <div class="search-block">
+            {{> Link className='link_gray' href='/profile/' text='Профиль >' }}
+            {{> SearchField }}
+        </div>
+        <div class="chats-feed">
+            {{#each (getChatItems)}}
+                {{> ChatItem this}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="content">
+        {{>ChatModule  (getUserChat)}}
+    </div>
+</div>

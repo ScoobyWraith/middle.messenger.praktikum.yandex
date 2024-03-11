@@ -1,0 +1,11 @@
+<div class="input-field{{#if className}} {{ className }}{{/if}}">
+    <div class="input-field__title">
+        {{ title }}
+    </div>
+    <div>
+        {{> Input type=type className='input-field__input' placeholder=placeholder name=name }}
+    </div>
+    <div class="input-field__error">
+        {{ textError }}
+    </div>
+</div>

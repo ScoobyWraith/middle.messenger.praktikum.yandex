@@ -1,0 +1,8 @@
+@import '../../common-styles/style-vars';
+
+.dialog-window {
+    width: 340px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: $common-shadow;
+}

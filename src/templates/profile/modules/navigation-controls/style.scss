@@ -1,0 +1,11 @@
+@import './../../../../common-styles/style-vars.scss';
+
+.profile-navigation-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &_red-link {
+        color: $common-red-color;
+    }
+}

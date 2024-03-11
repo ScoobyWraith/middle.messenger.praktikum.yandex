@@ -1,0 +1,5 @@
+<div class="messages-feed {{#if className}} {{className}}{{/if}}">
+    {{#each (getMessages)}}
+        {{>Message this }}
+    {{/each}}
+</div>

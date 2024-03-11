@@ -1,0 +1,18 @@
+<div class="profile-container">
+    <a class="profile-container__side-bar" href="/chats/">
+        {{>ButtonArrow className='profile-container__side-bar-arrow'}}
+    </a>
+    <div class="profile-container__content">
+        <div class="profile-container__wrapper">
+            <div class="profile-container__head">
+                {{>Avatar avatar=avatar className='profile-container__avatar' classNameImg='profile-container__avatar-img'}}
+            </div>
+            <div class="profile-container__form">
+                {{> UserForm }}
+            </div>
+            <div class="profile-container__controls">
+                {{> NavigationControls }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+@import '../../common-styles/style-vars';
+
+.link {
+    color: $common-blue-color;
+    text-decoration: none;
+
+    &:hover {
+        color: color-mix(in srgb, $common-blue-color 80%, black);
+    }
+
+    &:active {
+        color: color-mix(in srgb, $common-blue-color 60%, black);
+    }
+}
+
+.link_gray {
+    color: $common-gray-color;
+    text-decoration: none;
+
+    &:hover {
+        color: color-mix(in srgb, $common-gray-color 80%, black);
+    }
+
+    &:active {
+        color: color-mix(in srgb, $common-gray-color 60%, black);
+    }
+}
