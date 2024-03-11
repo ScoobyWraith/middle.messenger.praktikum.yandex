@@ -45,4 +45,4 @@ npm run dev
 
 ##  Netlify
 
-С последней стабильной версией проекта можно предварительно ознакомиться по [ссылке на сервис Netlify](https://deploy--yandex-module-chat.netlify.app/).
+С последней стабильной версией проекта можно предварительно ознакомиться по [ссылке на сервис Netlify](https://yandex-module-chat.netlify.app/).
