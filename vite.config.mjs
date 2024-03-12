@@ -1,22 +1,56 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import handlebars from 'vite-plugin-handlebars';
 
+const root = 'src/pages/';
+const pages = {
+    main: {
+        path: '/index.html',
+        context: { pageTitle: 'Главная', iconPathPrefix: './' },
+    },
+    login: {
+        path: '/login/index.html',
+        context: { pageTitle: 'Авторизация', iconPathPrefix: './images/' },
+    },
+    registration: {
+        path: '/registration/index.html',
+        context: { pageTitle: 'Регистрация', iconPathPrefix: './images/' },
+    },
+    profile: {
+        path: '/profile/index.html',
+        context: { pageTitle: 'Настройки пользователя', iconPathPrefix: './images/' },
+    },
+    chats: {
+        path: '/chats/index.html',
+        context: { pageTitle: 'Список чатов', iconPathPrefix: './images/' },
+    },
+    404: {
+        path: '/404/index.html',
+        context: { pageTitle: 'Страница не найдена', iconPathPrefix: './images/' },
+    },
+    500: {
+        path: '/500/index.html',
+        context: { pageTitle: 'Технические работы', iconPathPrefix: './images/' },
+    },
+};
+
+function getRollupInputPages() {
+    let result = {};
+
+    for (let name in pages) {
+        result[name] = resolve(__dirname, root, pages[name].path);
+    }
+
+    return result;
+}
 
 export default defineConfig({
-    root: resolve(__dirname, 'src/pages/'),
+    root: resolve(__dirname, root),
     build: {
         outDir: resolve(__dirname, 'dist'),
         emptyOutDir: true,
         rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'src/pages/index.html'),
-                login: resolve(__dirname, 'src/pages/login/index.html'),
-                registration: resolve(__dirname, 'src/pages/registration/index.html'),
-                chats: resolve(__dirname, 'src/pages/chats/index.html'),
-                profile: resolve(__dirname, 'src/pages/profile/index.html'),
-                404: resolve(__dirname, 'src/pages/404/index.html'),
-                500: resolve(__dirname, 'src/pages/500/index.html'),
-            },
+            input: getRollupInputPages(),
         },
     },
     resolve: {
@@ -24,4 +58,14 @@ export default defineConfig({
             src: '/src',
         },
     },
+    plugins: [
+        handlebars({
+            context(pagePath) {
+                let targetPage = Object.values(pages)
+                    .find(page => page.path == pagePath);
+                return targetPage ? targetPage.context: {};
+            },
+            partialDirectory: resolve(__dirname, 'src/layouts'),
+        }),
+    ],
 });

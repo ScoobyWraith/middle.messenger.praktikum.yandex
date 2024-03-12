@@ -1,7 +1,7 @@
 <div class="round-avatar {{#if className}}  {{className}}{{/if}}">
-    {{#if avatar }}
-    <img class="round-avatar__img {{#if classNameImg}}  {{classNameImg}}{{/if}}" src="{{ avatar }}" />
-    {{else}}
-    <img class="round-avatar__img {{#if classNameImg}}  {{classNameImg}}{{/if}}" src="../images/default-avatar.png" />
-    {{/if}}
+    <img 
+        class="round-avatar__img{{#if classNameImg}} {{classNameImg}}{{/if}}" 
+        alt="{{#if alt}}{{alt}}{{else}}Аватар пользователя{{/if}}"
+        src="{{#if avatar}}{{avatar}}{{else}}../images/default-avatar.png{{/if}}"
+    />
 </div>

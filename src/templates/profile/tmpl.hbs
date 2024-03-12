@@ -2,10 +2,11 @@
     <a class="profile-container__side-bar" href="/chats/">
         {{>ButtonArrow className='profile-container__side-bar-arrow'}}
     </a>
-    <div class="profile-container__content">
+    <section class="profile-container__content">
         <div class="profile-container__wrapper">
             <div class="profile-container__head">
-                {{>Avatar avatar=avatar className='profile-container__avatar' classNameImg='profile-container__avatar-img'}}
+                {{>Avatar avatar=avatar className='profile-container__avatar'
+                classNameImg='profile-container__avatar-img'}}
             </div>
             <div class="profile-container__form">
                 {{> UserForm }}
@@ -14,5 +15,5 @@
                 {{> NavigationControls }}
             </div>
         </div>
-    </div>
+    </section>
 </div>
