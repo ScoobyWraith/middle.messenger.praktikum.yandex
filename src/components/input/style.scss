@@ -1,0 +1,15 @@
+@import '../../common-styles/style-vars';
+
+.input {
+    width: 100%;
+    color: $common-black-color;
+    padding: 0;
+    padding-bottom: 7px;
+    border: none;
+    border-bottom: 1px $common-blue-color solid;
+    outline: none;
+
+    &::placeholder {
+        color: $common-gray-color;
+    }
+}

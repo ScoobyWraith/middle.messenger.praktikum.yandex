@@ -1,0 +1,27 @@
+@import '../../common-styles/style-vars';
+
+.entry-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    &__header {
+        flex: 1;
+    }
+
+    &__body {
+        flex: 1 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__footer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}

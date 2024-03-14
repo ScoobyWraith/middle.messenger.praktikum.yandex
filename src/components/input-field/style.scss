@@ -1,0 +1,17 @@
+@import '../../common-styles/style-vars';
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__title {
+        font: $font-micro;
+        color: $common-gray-color;
+    }
+
+    &__error {
+        font: $font-micro-thin;
+        color: $common-red-color;
+    }
+}

@@ -1,0 +1,41 @@
+@import './../../common-styles/style-vars.scss';
+
+.chats {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .side {
+        flex: 0 0 310px;
+        border-right: 1px solid $common-border-gray-color;
+        background-color: $common-light-gray-color;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+
+        .search-block {
+            border-bottom: 1px solid $common-border-gray-color;
+            flex: 0 0 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+            padding: 10px 0;
+        }
+
+        .chats-feed {
+            overflow: auto;
+        }
+    }
+
+    .content {
+        font: $font-title;
+        color: $common-gray-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}

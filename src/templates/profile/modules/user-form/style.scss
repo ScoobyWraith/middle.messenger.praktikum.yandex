@@ -1,0 +1,12 @@
+@import './../../../../common-styles/style-vars.scss';
+
+.profile-main-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-field.hidden {
+    display: none;
+}

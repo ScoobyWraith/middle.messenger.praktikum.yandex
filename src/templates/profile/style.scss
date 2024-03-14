@@ -1,0 +1,72 @@
+@import './../../common-styles/style-vars.scss';
+
+.profile-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    &__side-bar {
+        flex: 0 0 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        border-right: 1px solid $common-border-gray-color;
+        background-color: $common-light-gray-color;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__side-bar:hover {
+        background-color: color-mix(in srgb, $common-light-gray-color 97%, black);
+    }
+
+    &__side-bar:active {
+        background-color: color-mix(in srgb, $common-light-gray-color 95%, black);
+    }
+
+    &__side-bar-arrow {
+        transform: scale(-1, -1);
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__wrapper {
+        flex: 0 0 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__head {
+        width: 100%;
+        flex: 0 0 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__avatar, &__avatar-img {
+        height: 100%;
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__controls {
+        align-self: flex-start;
+    }
+}
+
+.border-line {
+    border-bottom: 1px solid $common-border-gray-color;
+    height: 1px;
+    width: 100%;
+}

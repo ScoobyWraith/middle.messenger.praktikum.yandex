@@ -1,0 +1,75 @@
+@import './../../common-styles/style-vars';
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .chats {
+        flex: 0 1 310px;
+        border-right: 1px solid $common-gray-color;
+        background-color: #fbfbfb;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &__nav {
+            flex: 0 1 100px;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+
+            .chats__item {
+                height: 85px;
+                display: flex;
+                padding: 10px 0;
+
+                .avatar {
+                    flex: 0 1 85px;
+                    padding: 10px;
+
+                    img {
+                        width: 85px;
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    padding-right: 15px;
+                    gap: 5px
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .unreads {
+                        padding: 5px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: $common-blue-color;
+                        border-radius: 30px;
+                        color: #fbfbfb;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .preview {
+        flex: 1 auto;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid $common-gray-color;
+    }
+}

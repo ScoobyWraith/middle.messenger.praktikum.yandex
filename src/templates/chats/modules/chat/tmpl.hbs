@@ -1,0 +1,26 @@
+<div class="chat-window {{#if className}} {{className}}{{/if}}">
+    <div class="chat-window__header">
+        <div class="chat-window__user">
+            {{>Avatar avatar=avatar className='chat-window__avatar' classNameImg='chat-window__avatar-img'}}
+            <span class="chat-window__user-name">{{ name }}</span>
+        </div>
+        <button class="chat-window__header-menu-btn around-block">
+            ⋮
+        </button>
+
+    </div>
+    <div class="chat-window__content">
+        {{>MessagesFeed}}
+    </div>
+    <form class="chat-window__send">
+        <button class="chat-window__attach" onclick="return false">
+            <img class="chat-window__attach-img" src="../images/paper-clip.png" alt="Иконка вложений" />
+        </button>
+        <div class="chat-window__message">
+            <input class="chat-window__message-input" name="message" type="text" placeholder="Сообщение">
+        </div>
+        <button class="chat-window__send-btn" onclick="return false">
+            {{>ButtonArrow}}
+        </button>
+    </form>
+</div>

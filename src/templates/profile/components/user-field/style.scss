@@ -1,0 +1,28 @@
+@import '../../../../common-styles/style-vars';
+
+.user-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &_hidden {
+        display: none;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        direction: RTL;
+    }
+
+    &__input {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        border: 0;
+        outline: none;
+        background-color: $common-white-color;
+        color: $common-gray-color;
+    }
+}

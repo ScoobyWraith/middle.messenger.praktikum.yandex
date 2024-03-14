@@ -1,0 +1,20 @@
+{{#> DialogWindow}}
+<form class="entry-form">
+    <div class="entry-form__header">
+        {{> Title text='Регистрация' }}
+    </div>
+    <div class="entry-form__body">
+        {{> InputField name='email' type='email' placeholder='Почта' title='Почта' }}
+        {{> InputField name='login' type='text' placeholder='Логин' title='Логин' }}
+        {{> InputField name='first_name' type='text' placeholder='Имя' title='Имя' }}
+        {{> InputField name='second_name' type='text' placeholder='Фамилия' title='Фамилия' }}
+        {{> InputField name='phone' type='tel' placeholder='Телефон' title='Телефон' }}
+        {{> InputField name='password' type='password' placeholder='Пароль' title='Пароль' }}
+        {{> InputField name='password-retype' type='password' placeholder='Пароль (еще раз)' title='Пароль (еще раз)' }}
+    </div>
+    <div class="entry-form__footer">
+        {{> Button text='Зарегистрироваться'}}
+        {{> Link text='Вход' href='/login/'}}
+    </div>
+</form>
+{{/DialogWindow}}
